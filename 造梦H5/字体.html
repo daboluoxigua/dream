@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/viewprort.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+		<script>
+			function draw(){
+				var ratio = $(window).width()/750;
+				var role=document.getElementById("role_front");
+				var canvas=document.getElementById("canvas");
+				canvas.width=750*ratio;
+				canvas.height=1334*ratio;
+				var ctx=canvas.getContext('2d');
+				var canWidth = canvas.width;
+				var canHeight = canvas.height;
+				
+				console.log(ratio)
+				
+				var lineH=0;
+				ctx.font=28*ratio + "px Microsoft Yahei";
+				ctx.fillText("文字",ratio*80,ratio*130+ratio*lineH);
+				$(".imgs").attr("src",canvas.toDataURL("../images/jpeg", 0.8))
+			}
+			window.onload=function(){
+				draw()
+			}
+		</script>
+	</head>
+	<body>
+		<p>文字</p>
+		<canvas id="canvas" width="750" height="1334" style="display: block;"></canvas>
+	</body>
+</html>

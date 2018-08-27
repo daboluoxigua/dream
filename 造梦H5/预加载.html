@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+
+	
+function loadImg(url, cb) {
+    var img = new Image();
+    img.src = url;
+    img.onload = cb;
+}
+
+function loadImages(urlArr, afterAllLoadedFunc) {
+    var count = urlArr.length;
+    var loadedCount = 0;
+
+    for (var i = count - 1; i >= 0; i--) {
+        loadImg(urlArr[i], function () {
+            loadedCount += 1;
+            if (count === loadedCount) {
+                afterAllLoadedFunc();
+            }
+        });
+    }
+}
+
+loadImages([
+    'images/scene/scene1.gif',
+    'images/scene/scene2.gif',
+    'images/scene/scene3.gif',
+    'images/scene/scene4.gif',
+    'images/scene/scene5.gif',
+    'images/scene/scene6.gif'
+], function () {
+    alert('all imgs have been loaded');
+});
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

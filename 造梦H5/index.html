@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/viewprort.js"></script>
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body>
+		<div class="spxd"></div>
+		<div class="loading"><img src="images/loading.gif"></div>
+		
+		<div class="box">
+		
+			<div class="titles">
+				<span id="jump">跳过</span>
+				<video x5-video-player-type="h5"  playsinline="" id="myAudio" webkit-playsinline="" style="width: 100%; height: 100%; object-fit: cover;">
+					<source src="http://images.qian88.com.cn/zmjh/images/titles.ogg"></source>
+					<source src="http://images.qian88.com.cn/zmjh/images/titles.mp4"></source>
+				</video>
+			</div>
+			
+			<div class="entrance">
+				<img src="images/entrance.gif">
+				<button class="go"></button>
+			</div>
+			
+			<div class="sex">
+				<div class="sexbox">
+					<p>请选择你的性别</p>
+					<div class="man">
+						<div class="ico"></div>
+						<span>男</span>
+					</div>
+					<div class="woman">
+						<div class="ico"></div>
+						<span>女</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="choice-role">
+				<div class="c-box">
+					<div class="hide m">
+						<span index=6></span>
+						<span index=4></span>
+						<span index=5></span>
+						
+					</div>
+					<div class="hide w">
+						<span index=3></span>
+						<span index=1></span>
+						<span index=2></span>
+					</div>
+					
+					<div class="name">
+						<input type="text" name="" id="" value="" placeholder="填写名字" maxlength="10" />
+						<button>重新选择</button><button>确定</button>
+					</div>
+					
+					<p class="p">请选择你的人物</p>
+				</div>
+			</div>
+			
+			
+			<div class="main">
+				
+				<div class="question">
+					<div class="q"></div>
+					<button class="ask"></button>
+					<button class="ask"></button>
+					<button class="ask"></button>
+				</div>
+				<div class="cover"></div>
+				
+				<div class="bg">
+					<img src="" alt="" class="role" />
+					<div class="particle"></div>
+					<div class="scene">
+						<img src="images/scene/scene6.gif"/>
+						<img src="images/scene/scene5.gif"/>
+						<img src="images/scene/scene4.gif"/>
+						<img src="images/scene/scene3.gif"/>
+						<img src="images/scene/scene2.gif"/>
+						<img src="images/scene/scene1.gif"/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="result">
+				<div class="resultbox">
+					<div class="imgbox">
+						<p>长按保存图片</p>
+						<div class="imgbg">
+							<img src="" alt="" class="imgs" />
+						</div>
+						
+					</div>
+					<canvas id="canvas" width="50" height="40"></canvas>
+					<div class="btnbox">
+						<a href="javascript:void(0)" class="again"><img src="images/again.png"></a>
+						<a href="https://wap.qian88.com/dreamActiveIndex.html"><img src="images/refuel.png"></a>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="audioBox">
+				<!--背景-->
+				<audio src="" loop="loop" preload="auto" id="bgm"></audio>
+				<!--走路-->
+				<audio src="images/music/move.mp3" preload="auto" id="move"></audio>
+				<!--其他-->
+				<audio src="images/music/1.mp3" preload="auto" id="Mlist"></audio>
+			</div>
+		</div>
+		
+			
+		<script type="text/javascript" src="js/main.js" ></script>
+	</body>
+
+</html>

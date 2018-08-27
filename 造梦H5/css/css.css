@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body,
+.main {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+  font-size: 0.59733333rem;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  background: #211a4a;
+  background-size: 11.392rem 17.06666667rem;
+  text-align: center;
+}
+.loading img {
+  width: 6.4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -3.2rem;
+  margin-left: -3.2rem;
+}
+.box {
+  display: none;
+  height: 100%;
+}
+.main {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+.main .question {
+  width: 12.672rem;
+  margin: -5.97333333rem 0 0 -6.37866667rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+  font-size: 0.59733333rem;
+  color: #fff;
+  display: none;
+  font-weight: bold;
+}
+.main .question .q {
+  width: 12.672rem;
+  background: url(../images/titbig.png);
+  background-size: 100% 100%;
+  height: 4.13866667rem;
+  line-height: 0.96rem;
+  padding: 1.06666667rem 1.17333333rem 0;
+}
+.main .question .ask {
+  background: url(../images/a0.png);
+  background-size: 100% 100%;
+  width: 12.672rem;
+  height: 2.85866667rem;
+  line-height: 2.85866667rem;
+  padding-left: 1.17333333rem;
+  border: none;
+  font-size: 0.59733333rem;
+  color: #fff;
+  text-align: left;
+}
+.main .question .ask.current {
+  background: url(../images/a1.png);
+  background-size: 100% 100%;
+}
+.main .cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  z-index: 990;
+  display: none;
+}
+.bg {
+  width: 100%;
+  height: 197.86666667rem;
+  position: relative;
+}
+.bg .scene {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.bg .scene img {
+  width: 100%;
+  float: left;
+}
+.bg .scene img:nth-child(1) {
+  height: 25.19466667rem;
+}
+.bg .scene img:nth-child(2) {
+  height: 21.58933333rem;
+}
+.bg .scene img:nth-child(3) {
+  height: 39.31733333rem;
+}
+.bg .scene img:nth-child(4) {
+  height: 37.65333333rem;
+}
+.bg .scene img:nth-child(5) {
+  height: 35.84rem;
+}
+.bg .scene img:nth-child(6) {
+  height: 38.656rem;
+}
+.bg .role {
+  width: 3.264rem;
+  height: 8.192rem;
+  position: absolute;
+  z-index: 90;
+}
+.entrance {
+  width: 100%;
+  height: 100%;
+  background: url(../images/sex.jpg);
+  background-size: 100% auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.entrance img {
+  width: 100%;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.entrance .go {
+  background: url(../images/go.png);
+  background-size: 100% auto;
+  width: 6.37866667rem;
+  height: 1.792rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -3.18933333rem;
+  border: none;
+}
+.sex {
+  width: 100%;
+  height: 100%;
+  background: url(../images/sex.jpg);
+  background-size: 100% 100%;
+  display: none;
+}
+.sex .sexbox {
+  position: absolute;
+  top: 50%;
+  margin-top: -11.38133333rem;
+  width: 100%;
+}
+.sex p {
+  font-size: 0.81066667rem;
+  color: #5c95b1;
+  text-align: center;
+  line-height: 3.94666667rem;
+}
+.sex .man,
+.sex .woman {
+  width: 7.12533333rem;
+  margin: 0 auto 1.28rem;
+  text-align: center;
+}
+.sex .man .ico,
+.sex .woman .ico {
+  width: 7.12533333rem;
+  height: 7.12533333rem;
+}
+.sex .man span,
+.sex .woman span {
+  color: #7ecef4;
+  font-size: 0.768rem;
+}
+.sex .man .ico {
+  background: url(../images/man.png);
+  background-size: 100% 100%;
+}
+.sex .man.a .ico {
+  background: url(../images/man-a.png);
+  background-size: 100% 100%;
+}
+.sex .woman .ico {
+  background: url(../images/woman.png);
+  background-size: 100% 100%;
+}
+.sex .woman.a .ico {
+  background: url(../images/woman-a.png);
+  background-size: 100% 100%;
+}
+.choice-role {
+  float: left;
+  width: 100%;
+  height: 100%;
+  min-height: 28.45866667rem;
+  background: url(../images/choice-role.jpg) top;
+  background-size: 100% auto;
+  display: none;
+  position: relative;
+}
+.choice-role .c-box {
+  height: 28.45866667rem;
+  position: relative;
+  width: 100%;
+}
+.choice-role .hide {
+  display: none;
+}
+.choice-role .p {
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0.64rem;
+  font-size: 0.768rem;
+}
+.choice-role .m span:nth-child(1) {
+  background-image: url(../images/role/m60.png);
+}
+.choice-role .m span:nth-child(1).a {
+  background-image: url(../images/role/m61.png);
+}
+.choice-role .m span:nth-child(2) {
+  background-image: url(../images/role/m40.png);
+}
+.choice-role .m span:nth-child(2).a {
+  background-image: url(../images/role/m41.png);
+}
+.choice-role .m span:nth-child(3) {
+  background-image: url(../images/role/m50.png);
+}
+.choice-role .m span:nth-child(3).a {
+  background-image: url(../images/role/m51.png);
+}
+.choice-role .w span:nth-child(1) {
+  background-image: url(../images/role/w30.png);
+}
+.choice-role .w span:nth-child(1).a {
+  background-image: url(../images/role/w31.png);
+}
+.choice-role .w span:nth-child(2) {
+  background-image: url(../images/role/w10.png);
+}
+.choice-role .w span:nth-child(2).a {
+  background-image: url(../images/role/w11.png);
+}
+.choice-role .w span:nth-child(3) {
+  background-image: url(../images/role/w20.png);
+}
+.choice-role .w span:nth-child(3).a {
+  background-image: url(../images/role/w21.png);
+}
+.choice-role span {
+  width: 3.69066667rem;
+  height: 12.096rem;
+  position: absolute;
+  background-size: 100% 100%;
+  display: inline-block;
+}
+.choice-role span:nth-child(1) {
+  left: 7.18933333rem;
+  bottom: 16.85333333rem;
+}
+.choice-role span:nth-child(2) {
+  left: 2.41066667rem;
+  bottom: 6.25066667rem;
+}
+.choice-role span:nth-child(3) {
+  left: 8.85333333rem;
+  bottom: 2.24rem;
+}
+.choice-role .name {
+  position: fixed;
+  width: 12.672rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -6.336rem;
+  margin-top: -2.85866667rem;
+  display: none;
+}
+.choice-role .name input[type=text] {
+  background: url(../images/input.png);
+  background-size: 100% 100%;
+  width: 12.672rem;
+  height: 2.85866667rem;
+  padding: 1.17333333rem 1.77066667rem;
+  line-height: 1.06666667rem;
+  border: none;
+  font-size: 0.59733333rem;
+  color: #fff;
+}
+.choice-role .name button {
+  background: url(../images/btn.png);
+  background-size: 100% 100%;
+  width: 6.272rem;
+  height: 2.85866667rem;
+  color: #fff;
+  font-size: 0.59733333rem;
+  border: none;
+}
+.choice-role .name button:last-child {
+  float: right;
+}
+.result {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: url(../images/resultbg.jpg);
+  background-size: 100% auto;
+  display: none;
+}
+.result .btnbox {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.96rem;
+}
+.result .btnbox a {
+  display: inline-block;
+  margin: 0 0.42666667rem;
+}
+.result .btnbox a img {
+  height: 1.664rem;
+}
+.result .imgbox {
+  width: 14.03733333rem;
+  height: 20.90666667rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.result .imgbox .imgs {
+  width: 100%;
+  float: left;
+}
+.result .imgbox p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0.42666667rem;
+  color: #b1b0b0;
+  font-size: 0.512rem;
+  text-shadow: 0.02133333rem 0.02133333rem 0 #ffffff;
+}
+.result .resultbox {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -11.712rem;
+}
+.titles {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+.titles video {
+  width: 100%;
+  height: 100%;
+}
+.titles #jump {
+  position: absolute;
+  width: 1.28rem;
+  height: 1.28rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1.06666667rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.512rem;
+  line-height: 1.28rem;
+  text-align: center;
+  right: 0.42666667rem;
+  top: 0.42666667rem;
+  z-index: 999;
+}
+#audioBox {
+  display: none;
+}
+#canvas {
+  width: 16rem;
+  height: 28.45866667rem;
+  position: fixed;
+  z-index: 999;
+  display: none;
+}
+.poster {
+  float: left;
+  width: 100%;
+  height: 28.45866667rem;
+  display: none;
+}
+.poster .imgs {
+  width: 16rem;
+  height: 28.45866667rem;
+}
